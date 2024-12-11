@@ -23,12 +23,12 @@ os.environ["LANGCHAIN_ENDPOINT"] = "https://api.smith.langchain.com"
 load_dotenv()
 
 OPENAI_API_KEY=os.environ.get('OPENAI_API_KEY')
-LANGCHAIN_API_KEY_2=os.environ.get('LANGCHAIN_API_KEY_2')
+LANGCHAIN_API_KEY_GRAPH=os.environ.get('LANGCHAIN_API_KEY_GRAPH')
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Initialize LangSmith client to trace the code
-client = Client(api_key=LANGCHAIN_API_KEY_2)
+client = Client(api_key=LANGCHAIN_API_KEY_GRAPH)
 
 
 @tool
